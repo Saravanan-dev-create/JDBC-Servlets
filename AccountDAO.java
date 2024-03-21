@@ -13,19 +13,16 @@ public class AccountDAO {
 
 	public static void main(String[] args) {
 		/*
-		 * URL: jdbc:postgresql://localhost:5432/account
-		 * Username: postgres
-		 * Password: root
+		 * URL: jdbc:postgresql://localhost:5432/account Username: postgres Password:
+		 * root
 		 * 
-		 * 1. Establish the connection using JDBC Driver Manager
-		 * 2. Create Statement
-		 * 3. Execute statement - executeUpdate / executeQuery
+		 * 1. Establish the connection using JDBC Driver Manager 2. Create Statement 3.
+		 * Execute statement - executeUpdate / executeQuery
 		 */
-		try (
-        Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Account", "postgres", "root");
+		try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Account", "postgres",
+				"root");
 				Statement createStatement = connection.createStatement();
-				ResultSet resultSet = createStatement.executeQuery("select * from account");
-        ) {
+				ResultSet resultSet = createStatement.executeQuery("select * from account");) {
 
 //			int result = createStatement.executeUpdate("insert into account values(101455, 'Vanmathi', 'Sathyamoorthy', 15000)");
 //			int result = createStatement.executeUpdate("update account set balance = 50000 where lastname = 'Sathyamoorthy'");
